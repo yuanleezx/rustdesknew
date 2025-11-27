@@ -1620,26 +1620,26 @@ class _NetworkState extends State<_Network> with AutomaticKeepAliveClientMixin {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (!hideServer)
-                listTile(
-                  icon: Icons.dns_outlined,
-                  title: 'ID/Relay Server',
-                  onTap: () => showServerSettings(gFFI.dialogManager, setState),
-                ),
-              if (!hideProxy && !hideServer) divider,
-              if (!hideProxy)
-                listTile(
-                  icon: Icons.network_ping_outlined,
-                  title: 'Socks5/Http(s) Proxy',
-                  onTap: changeSocks5Proxy,
-                ),
-              if (!hideWebSocket && (!hideServer || !hideProxy)) divider,
-              if (!hideWebSocket)
-                switchWidget(
-                    Icons.web_asset_outlined,
-                    'Use WebSocket',
-                    '${translate('websocket_tip')}\n\n${translate('server-oss-not-support-tip')}',
-                    kOptionAllowWebSocket),
+//              if (!hideServer)
+//                listTile(
+//                  icon: Icons.dns_outlined,
+//                  title: 'ID/Relay Server',
+//                  onTap: () => showServerSettings(gFFI.dialogManager, setState),
+//                ),
+//              if (!hideProxy && !hideServer) divider,
+//              if (!hideProxy)
+//                listTile(
+//                  icon: Icons.network_ping_outlined,
+//                  title: 'Socks5/Http(s) Proxy',
+//                 onTap: changeSocks5Proxy,
+//               ),
+//              if (!hideWebSocket && (!hideServer || !hideProxy)) divider,
+//              if (!hideWebSocket)
+//                switchWidget(
+//                    Icons.web_asset_outlined,
+//                    'Use WebSocket',
+//                    '${translate('websocket_tip')}\n\n${translate('server-oss-not-support-tip')}',
+//                    kOptionAllowWebSocket),
               if (!isWeb)
                 futureBuilder(
                   future: bind.mainIsUsingPublicServer(),
@@ -2333,7 +2333,7 @@ class _AboutState extends State<_About> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Copyright © ${DateTime.now().toString().substring(0, 4)} Purslane Ltd.\n$license',
+                            'Copyright © ${DateTime.now().toString().substring(0, 4)} YuanLi Ltd.\n$license',
                             style: const TextStyle(color: Colors.white),
                           ),
                           Text(
